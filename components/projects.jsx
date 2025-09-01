@@ -11,40 +11,40 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "E-Commerce Dashboard",
+      title: "Cross Platform Task Manager ",
       description:
         "A responsive admin dashboard for an e-commerce platform with analytics, inventory management, and order processing.",
-      image: "https://img.freepik.com/free-psd/various-web-printable-templates-with-screen_23-2148450117.jpg?uid=R177832842&ga=GA1.1.1936951632.1729536474&semt=ais_hybrid&w=740",
-      tags: ["React", "Next.js", "Tailwind CSS", "Chart.js"],
-      liveUrl: "#",
-      githubUrl: "#",
+      image: "/task-manager.jpg",
+      tags: ["Python", "Psutil", "Electron", "Operating System"],
+      liveUrl: "",
+      githubUrl: "https://github.com/TaQsiimUwU/Task-manager-with-GUI",
     },
     {
-      title: "Travel Booking App",
+      title: "Project U",
       description:
         "A modern travel booking application with destination search, booking management, and user authentication.",
-      image: "https://img.freepik.com/free-psd/various-web-printable-templates-with-screen_23-2148450117.jpg?uid=R177832842&ga=GA1.1.1936951632.1729536474&semt=ais_hybrid&w=740",
-      tags: ["React", "Redux", "Tailwind CSS", "Firebase"],
-      liveUrl: "#",
-      githubUrl: "#",
+      image: "/project-U.png",
+      tags: ["Python", "Flask", "JS", "SWE"],
+      liveUrl: "",
+      githubUrl: "https://github.com/Amr-Ma7moud/Project_U",
     },
     {
-      title: "Recipe Finder",
+      title: "Course Catalog",
       description:
         "A web application that allows users to search for recipes based on ingredients, dietary restrictions, and meal types.",
-      image: "https://img.freepik.com/free-psd/various-web-printable-templates-with-screen_23-2148450117.jpg?uid=R177832842&ga=GA1.1.1936951632.1729536474&semt=ais_hybrid&w=740",
-      tags: ["Next.js", "API Integration", "Responsive Design"],
-      liveUrl: "#",
-      githubUrl: "#",
+      image: "",
+      tags: ["PHP" ,"Laravel", "API Integration", "Vanilla Responsive Design"],
+      liveUrl: "",
+      githubUrl: "https://github.com/Amr-Ma7moud/CourseCatalogue",
     },
     {
       title: "Portfolio Website",
       description:
         "A personal portfolio website showcasing projects, skills, and contact information with a modern design.",
-      image: "https://img.freepik.com/free-psd/various-web-printable-templates-with-screen_23-2148450117.jpg?uid=R177832842&ga=GA1.1.1936951632.1729536474&semt=ais_hybrid&w=740",
-      tags: ["React", "Framer Motion", "Tailwind CSS"],
+      image: "portfolio.png",
+      tags: ["React", "JS", "Tailwind CSS"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Amr-Ma7moud/My_Portfolio",
     },
   ]
 
@@ -120,15 +120,6 @@ export default function Projects() {
                 </div>
                 <div className="flex gap-4">
                   <a
-                    href={project.liveUrl}
-                    className="flex items-center gap-2 text-sm text-purple-400 hover:text-purple-300 transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <ExternalLink size={16} />
-                    Live Demo
-                  </a>
-                  <a
                     href={project.githubUrl}
                     className="flex items-center gap-2 text-sm text-purple-400 hover:text-purple-300 transition-colors"
                     target="_blank"
@@ -137,6 +128,17 @@ export default function Projects() {
                     <Github size={16} />
                     Source Code
                   </a>
+                    {project.liveUrl && (
+                        <a
+                            href={project.liveUrl}
+                            className="flex items-center gap-2 text-sm text-purple-400 hover:text-purple-300 transition-colors"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <ExternalLink size={16} />
+                            Live Demo
+                        </a>
+                    )}
                 </div>
               </div>
             </motion.div>
@@ -149,13 +151,13 @@ export default function Projects() {
           transition={{ duration: 0.5, delay: 0.8 }}
           className="text-center mt-12"
         >
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
-          >
-            View All Projects
-            <ArrowRight size={16} />
-          </a>
+            { projects.length > 4 &&(<a
+                href="#"
+                className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
+            >
+                View All Projects
+                <ArrowRight size={16}/>
+            </a>)}
         </motion.div>
       </div>
     </section>

@@ -9,6 +9,7 @@ import Projects from "@/components/projects"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import Background from "@/components/background"
+import Hero1 from "../components/hero1.1";
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false)
