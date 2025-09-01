@@ -146,9 +146,6 @@ export default function About() {
                                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-800 bg-opacity-50 rounded-full border border-gray-700 text-gray-300 hover:text-white hover:bg-blue-600 transition-all">
                                     <FaLinkedin size={20} />
                                 </a>
-                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-800 bg-opacity-50 rounded-full border border-gray-700 text-gray-300 hover:text-white hover:bg-blue-400 transition-all">
-                                    <FaTwitter size={20} />
-                                </a>
                             </div>
 
                             {/* Download Buttons */}
