@@ -5,13 +5,13 @@ export default function background() {
     <div >
         <Particles
             particleColors={['#ffffff', '#ffffff']}
-            particleCount={200}
+            particleCount={500}
             particleSpread={10}
-            speed={0.1}
+            speed={0.2}
             particleBaseSize={100}
-            moveParticlesOnHover={true}
-            alphaParticles={false}
-            disableRotation={false}
+            moveParticlesOnHover={false}
+            alphaParticles={true}
+            disableRotation={true}
         />
     </div>);
 }

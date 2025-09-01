@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X, Github, Linkedin, Twitter } from "lucide-react"
+import { Menu, X, Github, Linkedin } from "lucide-react"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -67,14 +67,6 @@ export default function Navbar() {
             >
               <Linkedin size={20} />
             </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-all hover:-translate-y-1 duration-200"
-            >
-              <Twitter size={20} />
-            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -118,14 +110,6 @@ export default function Navbar() {
                 className="text-gray-400 hover:text-white"
               >
                 <Linkedin size={20} />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white"
-              >
-                <Twitter size={20} />
               </a>
             </div>
           </nav>

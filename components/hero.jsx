@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { ArrowDown } from "lucide-react";
 import Link from "next/link";
+import NameSplit from "../components/namesplit";
 
 const PRIMARY_GRADIENT = "bg-gradient-to-r from-purple-600 to-blue-600";
 const SECONDARY_BG = "bg-gray-800 hover:bg-gray-700";
@@ -61,8 +62,9 @@ export default function Hero() {
         {/*</span>*/}
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-          Hi, I'm <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
-            Amr Mahmoud
+          <NameSplit  />
+            <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
+
           </span>
         </h1>
 
