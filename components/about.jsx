@@ -1,9 +1,17 @@
 "use client"
-
+import React from "react"
 import { useRef, useEffect, useState } from "react"
 import { ArrowDown, FileText, Mail, MapPin, Calendar, Code, Globe, Award } from "lucide-react"
+import { FaDownload, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { MdEmail } from "react-icons/md"
 import Link from "next/link"
-import { FaDownload, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+
+    const contactLinks = [
+        { name: FaGithub, href: "https://github.com/Amr-Ma7moud" },
+        { name: FaLinkedin, href: "https://www.linkedin.com/in/amr-mahmoud-/" },
+        { name: FaWhatsapp, href: "https://wa.me/+201033050549" },
+        { name: MdEmail, href: "mailto:amrma7mouddev05@gmail.com" },
+    ]
 
 export default function About() {
     const [isVisible, setIsVisible] = useState(false)
@@ -140,12 +148,15 @@ export default function About() {
 
                             {/* Social Links */}
                             <div className="flex justify-center gap-4 mb-10">
-                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-800 bg-opacity-50 rounded-full border border-gray-700 text-gray-300 hover:text-white hover:bg-purple-600 transition-all">
-                                    <FaGithub size={20} />
-                                </a>
-                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-800 bg-opacity-50 rounded-full border border-gray-700 text-gray-300 hover:text-white hover:bg-blue-600 transition-all">
-                                    <FaLinkedin size={20} />
-                                </a>
+                                {contactLinks.map((link) => (
+                                <a
+                                href={link.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-3 bg-gray-800 bg-opacity-50 rounded-full border border-gray-700 text-gray-300 hover:text-white hover:bg-purple-600 transition-all"
+                                >
+                                {React.createElement(link.name, { size: 20 })}
+                                </a>))}
                             </div>
 
                             {/* Download Buttons */}

@@ -1,9 +1,11 @@
 "use client"
 
+import React from "react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X, Github, Linkedin } from "lucide-react"
-import { MdEmail, MdWhatsapp } from "react-icons/md"
+import { MdEmail } from "react-icons/md"
+import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa"
+import { Menu, X } from "lucide-react"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -25,6 +27,13 @@ export default function Navbar() {
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ]
+
+    const contactLinks = [
+      { name: FaGithub, href: "https://github.com/Amr-Ma7moud" },
+      { name: FaLinkedin, href: "https://www.linkedin.com/in/amr-mahmoud-/" },
+      { name: FaWhatsapp, href: "https://wa.me/+201033050549" },
+      { name: MdEmail, href: "mailto:amrma7mouddev05@gmail.com" },
+    ]
 
   return (
     <header
@@ -52,38 +61,15 @@ export default function Navbar() {
 
           {/* Social Icons */}
           <div className="hidden md:flex items-center space-x-4">
+            {contactLinks.map((link) => (
             <a
-              href="https://github.com/Amr-Ma7moud"
+              href={link.href}
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-all hover:-translate-y-1 duration-200"
             >
-              <Github size={20} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/amr-mahmoud-/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-all hover:-translate-y-1 duration-200"
-            >
-              <Linkedin size={20} />
-            </a>
-            <a
-              href="mailto:amrma7mouddev05@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-all hover:-translate-y-1 duration-200"
-            >
-              <MdEmail size={20} />
-            </a>
-            <a
-              href="https://wa.me/+201033050549"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-all hover:-translate-y-1 duration-200"
-            >
-              <MdWhatsapp size={20} />
-            </a>
+              {React.createElement(link.name, { size: 20 })}
+            </a>))}
           </div>
 
           {/* Mobile Menu Button */}
@@ -112,38 +98,15 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="flex space-x-4 pt-4 border-t border-gray-800">
-              <a
-                href="https://github.com/Amr-Ma7moud"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 mb-5 hover:text-white"
-              >
-                <Github size={20} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/amr-mahmoud-/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white"
-              >
-                <Linkedin size={20} />
-              </a>
-              <a
-                href="mailto:amrma7mouddev05@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white"
-              >
-                <MdEmail size={20} />
-              </a>
-              <a
-                href="https://wa.me/+201033050549"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white"
-              >
-                <MdWhatsapp size={20} />
-              </a>
+            {contactLinks.map((link) => (
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 mb-5 hover:text-white"
+            >
+              {React.createElement(link.name, { size: 20 })}
+            </a>))}
             </div>
           </nav>
         </div>

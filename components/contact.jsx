@@ -1,7 +1,18 @@
 "use client"
-
+import React from "react";
 import { useState } from "react";
 import { Send, Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
+import { FaWhatsapp, FaLinkedin, FaGithub, FaClock } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+
+const contactLinks = [
+    { name: MdEmail, href: "mailto:amrma7mouddev05@gmail.com", innerText: "Amr.Mahmoud.Dev05@gmail.com", catagory: "Email" },
+    { name: FaWhatsapp, href: "https://wa.me/+201033050549", innerText: "+201033050549", catagory: "Phone" },
+    { name: FaLinkedin, href: "https://www.linkedin.com/in/amr-mahmoud-/", innerText: "Amr Mahmoud", catagory: "LinkedIn" },
+    { name: FaGithub, href: "https://github.com/Amr-Ma7moud", innerText: "Amr Mahmoud", catagory: "GitHub" },
+    { name: MapPin, href: "", innerText: "Borg Al-Arab, Alexandria, Egypt", catagory: "Location" },
+    { name: FaClock, href: "", innerText: "Usually Within 24 hours", catagory: "Response Time" }
+    ];
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -109,55 +120,26 @@ export default function Contact() {
                     {/* Contact Information */}
                     <div className="lg:col-span-1">
                         <div className="space-y-6 mb-10">
+                            {contactLinks
+                            .filter((link) =>
+                                [ FaWhatsapp, MdEmail ,FaClock ,MapPin].includes(link.name))
+                            .map((link) => 
                             <div className="flex items-start gap-4 p-4 bg-gray-900 rounded-lg hover:bg-gray-800 transition-all">
                                 <div className="p-3 bg-gray-800 rounded-lg text-purple-500">
-                                    <Mail size={20} />
+                                    {React.createElement(link.name, { size: 20 })}
                                 </div>
                                 <div>
-                                    <h4 className="font-medium mb-1">Email</h4>
+                                    <h4 className="font-medium mb-1">{link.catagory}</h4>
+                                    { link.href ?
                                     <a
-                                        href="mailto:Amr.Mahmoud.Dev05@gmail.com"
+                                        href={link.href}
                                         className="text-gray-400 hover:text-white transition-colors"
                                     >
-                                        Amr.Mahmoud.Dev05@gmail.com
-                                    </a>
+                                        {link.innerText}
+                                    </a> : link.innerText}
                                 </div>
                             </div>
-
-                            <div className="flex items-start gap-4 p-4 bg-gray-900 rounded-lg hover:bg-gray-800 transition-all">
-                                <div className="p-3 bg-gray-800 rounded-lg text-purple-500">
-                                    <Phone size={20} />
-                                </div>
-                                <div>
-                                    <h4 className="font-medium mb-1">Phone</h4>
-                                    <a
-                                        href="tel:+201033050549"
-                                        className="text-gray-400 hover:text-white transition-colors"
-                                    >
-                                        +20 103 305 0549
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-4 p-4 bg-gray-900 rounded-lg hover:bg-gray-800 transition-all">
-                                <div className="p-3 bg-gray-800 rounded-lg text-purple-500">
-                                    <Clock size={20} />
-                                </div>
-                                <div>
-                                    <h4 className="font-medium mb-1">Response Time</h4>
-                                    <p className="text-gray-400">Usually Within 24 hours</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-4 p-4 bg-gray-900 rounded-lg hover:bg-gray-800 transition-all">
-                                <div className="p-3 bg-gray-800 rounded-lg text-purple-500">
-                                    <MapPin size={20} />
-                                </div>
-                                <div>
-                                    <h4 className="font-medium mb-1">Location</h4>
-                                    <p className="text-gray-400">Borg Al-Arab, Alexandria, Egypt</p>
-                                </div>
-                            </div>
+                            )}
                         </div>
                     </div>
 
