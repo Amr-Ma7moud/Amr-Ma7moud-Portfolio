@@ -9,6 +9,7 @@ export default function Projects() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.1 })
 
+
   const projects = [
     {
       title: "Cross Platform Task Manager ",
@@ -98,7 +99,7 @@ export default function Projects() {
             <motion.div
               key={project.title}
               variants={itemVariants}
-              className="bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300"
+              className=" bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300"
             >
               <div className="relative h-60 overflow-hidden">
                 <Image

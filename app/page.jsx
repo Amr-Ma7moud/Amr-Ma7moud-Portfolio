@@ -17,6 +17,11 @@ export default function Home() {
   useEffect(() => {
     setIsLoaded(true)
   }, [])
+    const LoadingSpinner = () => (
+        <div className="spinner" aria-label="Loading">
+            <div className="spinner-circle"></div>
+        </div>
+    );
 
   return (
     <main className="min-h-screen">

@@ -75,18 +75,18 @@ export default function Skills() {
   ]
 
   const technologies = [
-    { name: "Git", icon: <FaGitAlt className="text-[#F05032]" size={36} /> },
-    { name: "GitHub", icon: <FaGithub size={24} /> },
       { name: "React", icon: <FaReact className="text-[#61DAFB]" size={36} /> },
       { name: "Laravel", icon: <FaLaravel className="text-[#F24E1E]" size={36} /> },
-      { name: "Flask", icon: <img src={"flask.svg"} alt={"Flask Logo"} width={36} height={36} /> },
+      { name: "Node.JS", icon: <FaNode className="text-[#215732]" size={46}/> },
       { name: "Electron", icon: <img src={"electron.svg"} alt={"Electron Logo"} width={36} height={36} /> },
-      { name: "Arch Linux", icon: <img src={"arch-linux.svg"} alt={"Arch Logo"} width={100} height={100} /> },
+      { name: "Flask",  icon: <img src={"flask.svg"} alt={"Flask Logo"} width={36} height={36} /> },
+      { name: "Gradle", icon: <img src={"gradle.svg"} alt={"Gradle Logo"} width={100} height={100} /> },
       { name: "Android Studio", icon: <img src={"android-studio.svg"} alt={"Android Studio Logo"} width={36} height={36} /> },
       { name: "VS Code", icon: <img src={"vsc.svg"} alt={"VSCode Logo"} width={36} height={36} /> },
-      { name: "Node.JS", icon: <FaNode className="text-[#215732]" size={46}/> },
-      { name: "Gradle", icon: <img src={"gradle.svg"} alt={"Gradle Logo"} width={100} height={100} /> },
+      { name: "Git", icon: <FaGitAlt className="text-[#F05032]" size={36} /> },
+      { name: "GitHub", icon: <FaGithub size={24} /> },
       { name: "Docker", icon: <FaDocker className="text-[Blue]" size={24} /> },
+      { name: "Linux", icon: <FaLinux  className={"text-[black]"} size={24} /> },
 
   ]
 

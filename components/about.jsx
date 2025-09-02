@@ -150,19 +150,11 @@ export default function About() {
 
                             {/* Download Buttons */}
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <a
-                                    href="/CV.pdf"
-                                    download="Amr-Mahmoud-CV.pdf"
-                                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium hover:from-purple-700 hover:to-blue-700 transition-all hover:scale-105"
-                                >
-                                    <FaDownload size={16} /> Download CV
-                                </a>
-
                                 <Link
                                     href="/CV.pdf"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gray-800 text-white font-medium hover:bg-gray-700 transition-all border border-gray-700"
+                                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium hover:from-purple-700 hover:to-blue-700 transition-all hover:scale-105"
                                 >
                                     <FileText size={18} /> View CV
                                 </Link>
