@@ -91,6 +91,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.variable} ${firaCode.variable} font-sans bg-gray-950 text-gray-100 antialiased`}>
         {/* Main content */}
         {children}
+        <Analytics />
       </body>
     </html>
   )
