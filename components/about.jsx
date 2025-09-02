@@ -2,16 +2,18 @@
 import React from "react"
 import { useRef, useEffect, useState } from "react"
 import { ArrowDown, FileText, Mail, MapPin, Calendar, Code, Globe, Award } from "lucide-react"
-import { FaDownload, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaDownload, FaClock, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md"
 import Link from "next/link"
 
-    const contactLinks = [
-        { name: FaGithub, href: "https://github.com/Amr-Ma7moud" },
-        { name: FaLinkedin, href: "https://www.linkedin.com/in/amr-mahmoud-/" },
-        { name: FaWhatsapp, href: "https://wa.me/+201033050549" },
-        { name: MdEmail, href: "mailto:amrma7mouddev05@gmail.com" },
-    ]
+const contactLinks = [
+    { name: MdEmail, href: "mailto:amrma7mouddev05@gmail.com", innerText: "Amr.Mahmoud.Dev05@gmail.com", catagory: "Email" },
+    { name: FaWhatsapp, href: "https://wa.me/+201033050549", innerText: "+201033050549", catagory: "Phone" },
+    { name: FaLinkedin, href: "https://www.linkedin.com/in/amr-mahmoud-/", innerText: "Amr Mahmoud", catagory: "LinkedIn" },
+    { name: FaGithub, href: "https://github.com/Amr-Ma7moud", innerText: "Amr Mahmoud", catagory: "GitHub" },
+    { name: MapPin, href: "", innerText: "Borg Al-Arab, Alexandria, Egypt", catagory: "Location" },
+    { name: FaClock, href: "", innerText: "Usually Within 24 hours", catagory: "Response Time" }
+    ];
 
 export default function About() {
     const [isVisible, setIsVisible] = useState(false)
@@ -120,15 +122,15 @@ export default function About() {
                                 and a commitment to code quality, I create solutions that are both beautiful and functional.
                             </p>
 
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
-                                <div className="flex items-center gap-3 bg-gray-800 bg-opacity-50 p-4 rounded-lg border border-gray-700">
-                                    <MapPin className="text-purple-500" size={24} />
-                                    <span className="text-gray-300">Alexandria, Egypt</span>
-                                </div>
-                                <div className="flex items-center gap-3 bg-gray-800 bg-opacity-50 p-4 rounded-lg border border-gray-700">
-                                    <Mail className="text-purple-500" size={24} />
-                                    <span className="text-gray-300">Amr.Mahmoud.dev05@gmail.com</span>
-                                </div>
+                            <div className="flex flex-col gap-6 mb-10">
+                                { contactLinks
+                                .filter((link) => [MdEmail, MapPin].includes(link.name))
+                                .map((link) => (<div className="flex items-center gap-3 bg-gray-600 bg-opacity-50 p-4 rounded-lg border border-gray-700 hover:bg-gray-800 transition-all">
+                                    {React.createElement(link.name, { className: "text-purple-500", size: 24 })}
+                                    {link.href ? <a href={link.href} className="text-gray-300 hover:text-white">{link.innerText}</a> 
+                                    : <span className="text-gray-300">{link.innerText}</span>}
+                                </div>))
+                                }
                             </div>
 
                             {/* Stats */}
@@ -148,7 +150,10 @@ export default function About() {
 
                             {/* Social Links */}
                             <div className="flex justify-center gap-4 mb-10">
-                                {contactLinks.map((link) => (
+                                {contactLinks
+                                .filter((link) =>
+                                    [FaGithub, FaLinkedin, FaWhatsapp, MdEmail].includes(link.name))
+                                .map((link) => (
                                 <a
                                 href={link.href}
                                 target="_blank"
