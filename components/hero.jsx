@@ -57,15 +57,8 @@ export default function Hero() {
       className="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden"
     >
       <div className="container px-4 md:px-6 z-10">
-        {/*<span className={`px-4 py-1 mb-4 rounded-full text-sm font-medium ${SECONDARY_BG} ${TEXT_SECONDARY}`}>*/}
-        {/*  Welcome to my portfolio*/}
-        {/*</span>*/}
-
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
           <NameSplit/>
-            <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
-
-          </span>
         </h1>
 
         <div className={`text-xl md:text-2xl ${TEXT_SECONDARY} mb-8 h-8`}>

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X, Github, Linkedin } from "lucide-react"
+import { MdEmail, MdWhatsapp } from "react-icons/md"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -67,6 +68,22 @@ export default function Navbar() {
             >
               <Linkedin size={20} />
             </a>
+            <a
+              href="mailto:amrma7mouddev05@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-all hover:-translate-y-1 duration-200"
+            >
+              <MdEmail size={20} />
+            </a>
+            <a
+              href="https://wa.me/+201033050549"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-all hover:-translate-y-1 duration-200"
+            >
+              <MdWhatsapp size={20} />
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -99,7 +116,7 @@ export default function Navbar() {
                 href="https://github.com/Amr-Ma7moud"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white"
+                className="text-gray-400 mb-5 hover:text-white"
               >
                 <Github size={20} />
               </a>
@@ -110,6 +127,22 @@ export default function Navbar() {
                 className="text-gray-400 hover:text-white"
               >
                 <Linkedin size={20} />
+              </a>
+              <a
+                href="mailto:amrma7mouddev05@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white"
+              >
+                <MdEmail size={20} />
+              </a>
+              <a
+                href="https://wa.me/+201033050549"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white"
+              >
+                <MdWhatsapp size={20} />
               </a>
             </div>
           </nav>
