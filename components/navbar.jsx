@@ -61,9 +61,10 @@ export default function Navbar() {
 
           {/* Social Icons */}
           <div className="hidden md:flex items-center space-x-4">
-            {contactLinks.map((link) => (
+            {contactLinks.map((link,index) => (
             <a
               href={link.href}
+              key={index}
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-all hover:-translate-y-1 duration-200"

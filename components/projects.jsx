@@ -87,7 +87,7 @@ export default function Projects() {
             with.
           </motion.p>
         </div>
-
+        
         <motion.div
           ref={ref}
           variants={containerVariants}
@@ -101,6 +101,7 @@ export default function Projects() {
               variants={itemVariants}
               className=" bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300"
             >
+
               <div className="relative h-60 overflow-hidden">
                 <Image
                   src={project.image || "/placeholder.svg"}
@@ -108,7 +109,7 @@ export default function Projects() {
                   fill
                   className="object-cover transition-transform duration-500 hover:scale-110"
                 />
-              </div>
+              </div >
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                 <p className="text-gray-400 mb-4">{project.description}</p>
@@ -130,12 +131,12 @@ export default function Projects() {
                     Source Code
                   </a>
                     {project.liveUrl && (
-                        <a
-                            href={project.liveUrl}
-                            className="flex items-center gap-2 text-sm text-purple-400 hover:text-purple-300 transition-colors"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
+                      <a
+                      href={project.liveUrl}
+                      className="flex items-center gap-2 text-sm text-purple-400 hover:text-purple-300 transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >
                             <ExternalLink size={16} />
                             Live Demo
                         </a>

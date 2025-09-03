@@ -27,9 +27,9 @@ export default function About() {
 
     // Stats data
     const stats = [
-        { icon: <Code size={20} />, label: "Projects Completed", value: "6+" },
+        { icon: <Code size={20} />, label: "Projects Completed", value: "+6" },
         { icon: <Calendar size={20} />, label: "Years Experience", value: "Student" },
-        { icon: <Award size={20} />, label: "Technologies", value: "5+" },
+        { icon: <Award size={20} />, label: "Technologies", value: "+5" },
     ];
 
     // Skills data
@@ -58,7 +58,7 @@ export default function About() {
     }, [])
 
     return (
-        <section id="about" className="py-20 min-h-screen max-h-screen bg-gradient-to-br from-gray-900 to-gray-800 relative overflow-hidden">
+        <section id="about" className="py-20 min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 relative overflow-hidden">
             {/* Animated background elements */}
             <div className="absolute inset-0 -z-10 overflow-hidden">
                 <div className="absolute top-20 left-40 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-10 animate-pulse"></div>
@@ -95,23 +95,37 @@ export default function About() {
                         <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mb-8"></div>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+                        <div className="order-2 lg:order-1 flex flex-col items-center" data-aos="fade-right" >
                         {/* Profile Image */}
-                        <div className="order-2 lg:order-1 flex justify-center">
-                            <div className="relative">
+                            <div className="relative mb-8">
                                 <div className="absolute -inset-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl blur-xl opacity-30"></div>
-                                <div className="relative bg-gray-800 bg-opacity-70 backdrop-blur-lg rounded-2xl p-2 border border-gray-700 overflow-hidden">
+                                <div className="relative bg-gray-800 bg-opacity-80 backdrop-blur-lg 
+                                rounded-2xl p-2 border border-gray-700 shadow-xl overflow-hidden
+                                hover:scale-105 transition-all"
+                                >
                                     <img
                                         src="/mypic.jpeg"
                                         alt="Amr Mahmoud"
-                                        className="w-80 h-80 object-cover rounded-2xl"
+                                        className="w-full max-w-2xl object-cover rounded-2xl border-4 border-purple-600 shadow-lg"
                                     />
                                 </div>
+                            </div>
+                            <div className=" flex-row gap-4 justify-center">
+                                <Link
+                                    href="/CV.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold shadow-md hover:from-purple-700 hover:to-blue-700 transition-all hover:scale-105"
+                                >
+                                    <FileText size={18} /> View CV
+                                </Link>
                             </div>
                         </div>
 
                         {/* Content */}
-                        <div className="order-1 lg:order-2">
+                        <div className="order-1 lg:order-2" data-aos="fade-left">
                             <h4 className="text-2xl md:text-3xl font-bold mb-6">
                                 Computer Science student at E-JUST
                             </h4>
@@ -125,8 +139,11 @@ export default function About() {
                             <div className="flex flex-col gap-6 mb-10">
                                 { contactLinks
                                 .filter((link) => [MdEmail, MapPin].includes(link.name))
-                                .map((link) => (<div className="flex items-center gap-3 bg-gray-600 bg-opacity-50 p-4 rounded-lg border border-gray-700 hover:bg-gray-800 transition-all">
-                                    {React.createElement(link.name, { className: "text-purple-500", size: 24 })}
+                                .map((link) => (<div className="flex items-center gap-3 bg-gray-600 bg-opacity-50 p-4 rounded-lg border
+                                border-gray-700 transition-all
+                                hover:bg-purple-600 hover:text-white
+                                ">
+                                    {React.createElement(link.name, { className: "text-white", size: 24 })}
                                     {link.href ? <a href={link.href} className="text-gray-300 hover:text-white">{link.innerText}</a> 
                                     : <span className="text-gray-300">{link.innerText}</span>}
                                 </div>))
@@ -134,17 +151,22 @@ export default function About() {
                             </div>
 
                             {/* Stats */}
-                            <div className="grid grid-cols-3 gap-4 mb-10">
+                            <div className="grid grid-cols-3 gap-4 mb-10"  >
                                 {stats.map((stat, index) => (
+                                    <div className={"hover:scale-110"}> 
                                     <div
                                         key={index}
-                                        className="bg-gray-800 bg-opacity-50 p-4 rounded-lg text-center border border-gray-700"
-                                        style={{ animationDelay: `${index * 0.2}s` }}
+                                        data-aos={"fade-up"}
+                                        data-aos-duration={700 + index * 200}
+                                        className="bg-gray-800 bg-opacity-50 p-4 rounded-lg
+                                        hover:bg-purple-800 transition-all
+                                        text-center border border-gray-700  "
                                     >
-                                        <div className="text-purple-500 flex justify-center mb-2">{stat.icon}</div>
+                                        <div className="text-white flex justify-center mb-2">{stat.icon}</div>
                                         <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-                                        <div className="text-sm text-gray-400">{stat.label}</div>
+                                        <div className="text-sm text-gray-400 ">{stat.label}</div>
                                     </div>
+                                </div>
                                 ))}
                             </div>
 
@@ -153,28 +175,18 @@ export default function About() {
                                 {contactLinks
                                 .filter((link) =>
                                     [FaGithub, FaLinkedin, FaWhatsapp, MdEmail].includes(link.name))
-                                .map((link) => (
-                                <a
+                                .map((link,index) => (
+                                <a data-aos={"fade-up"} data-aos-duration={200+index*200}
                                 href={link.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-3 bg-gray-800 bg-opacity-50 rounded-full border border-gray-700 text-gray-300 hover:text-white hover:bg-purple-600 transition-all"
+                                className="p-3 bg-gray-800 bg-opacity-50 rounded-full border border-gray-700 text-gray-300 hover:text-white hover:bg-purple-600
+                                hover:animate-bounce transition-all"
                                 >
                                 {React.createElement(link.name, { size: 20 })}
                                 </a>))}
                             </div>
 
-                            {/* Download Buttons */}
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <Link
-                                    href="/CV.pdf"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium hover:from-purple-700 hover:to-blue-700 transition-all hover:scale-105"
-                                >
-                                    <FileText size={18} /> View CV
-                                </Link>
-                            </div>
                         </div>
                     </div>
 

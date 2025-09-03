@@ -3,7 +3,9 @@
 import { useEffect, useRef } from "react";
 import { ArrowDown } from "lucide-react";
 import Link from "next/link";
-import NameSplit from "../components/namesplit";
+import NameSplit from "./namesplit";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const PRIMARY_GRADIENT = "bg-gradient-to-r from-purple-600 to-blue-600";
 const SECONDARY_BG = "bg-gray-800 hover:bg-gray-700";
@@ -13,7 +15,6 @@ const TEXT_TERTIARY = "text-gray-400";
 
 export default function Hero() {
   const textRef = useRef(null);
-
   useEffect(() => {
     const textElement = textRef.current;
     if (!textElement) return;
@@ -22,6 +23,7 @@ export default function Hero() {
       "an Android App Developer",
       "a Full-Stack Web Developer",
       "a Computer Science Student",
+      "an Arch Linux Enthusiast",
     ];
     let roleIndex = 0;
     let charIndex = 0;
@@ -61,23 +63,28 @@ export default function Hero() {
           <NameSplit/>
         </h1>
 
-        <div className={`text-xl md:text-2xl ${TEXT_SECONDARY} mb-8 h-8`}>
+        <div className={`text-2xl md:text-2xl ${TEXT_SECONDARY} mb-8 h-8`}>
           I'm <span ref={textRef} className={`${TEXT_PRIMARY} font-medium`}></span>
         </div>
+
+        {/* <div className={`text-2xl md:text-2xl ${TEXT_PRIMARY} </p>font-bold mb-8 ml-3 h-8`}>
+            <CoolTextSwitch className={`${TEXT_PRIMARY} font-medium`} />
+        </div> */}
+        {/* this is cool but noone liked it so i think it will not see production */}
 
         <p className={`max-w-2xl ${TEXT_TERTIARY} mb-10 mx-auto`}>
           I create engaging, responsive, and user-friendly web experiences and android apps
           with modern technologies and clean code.
         </p>
 
-        <div className="flex justify-center items-center flex-col sm:flex-row gap-4">
-          <Link
+        <div  className="flex justify-center items-center flex-col sm:flex-row gap-4">
+          <Link data-aos={"fade-up"} data-aos-duration={1500}
             href="#projects"
             className={`px-6 py-3 rounded-lg ${PRIMARY_GRADIENT} ${TEXT_PRIMARY} font-medium shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 transition-all hover:scale-105`}
           >
             View My Work
           </Link>
-          <Link
+          <Link data-aos={"fade-up"} data-aos-duration={1800}
             href="#contact"
             className={`px-6 py-3 rounded-lg ${SECONDARY_BG} ${TEXT_PRIMARY} font-medium transition-all hover:scale-105`}
           >
@@ -85,12 +92,11 @@ export default function Hero() {
           </Link>
         </div>
       </div>
-
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
         <a href="#about" className={`${TEXT_TERTIARY} hover:${TEXT_PRIMARY} transition-colors`}>
           <ArrowDown size={24} />
         </a>
-      </div>
+      </div> 
     </section>
   );
 }

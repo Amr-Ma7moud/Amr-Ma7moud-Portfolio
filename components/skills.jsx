@@ -114,9 +114,9 @@ export default function Skills() {
           <div>
             <h3 className="text-xl font-semibold mb-8 text-center">Core Competencies</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
-              {skills.map((skill) => (
-                <div
-                  key={skill.name}
+              {skills.map((skill, index) => (
+                <div data-aos={"fade-up"} data-aos-duration={800 + index * 300}
+                  key={index}
                   className="flex flex-col items-center justify-center p-6 bg-gray-800 rounded-xl hover:bg-gray-700 transition-all duration-300 hover:-translate-y-2"
                 >
                   <div className="mb-4">{skill.icon}</div>
@@ -130,9 +130,10 @@ export default function Skills() {
           <div className="mt-8">
             <h3 className="text-xl font-semibold mb-8 text-center">Technologies & Tools</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-              {technologies.map((tech) => (
+              {technologies.map((tech, index) => (
                 <div
-                  key={tech.name}
+                data-aos={"fade-up"} data-aos-duration={800 + index * 300}
+                  key={index}
                   className="flex flex-col items-center p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="mb-2">{tech.icon}</div>

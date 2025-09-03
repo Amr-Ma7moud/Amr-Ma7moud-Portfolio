@@ -4,9 +4,9 @@ export default function background() {
     return(
     <div >
         <Particles
-            particleColors={['#ffffff', '#ffffff']}
-            particleCount={500}
-            particleSpread={10}
+            particleColors={['#673AB7', '#2196F3', '#241440', '#ffffff', '#cccccc']}
+            particleCount={400}
+            particleSpread={5}
             speed={0.2}
             particleBaseSize={100}
             moveParticlesOnHover={false}

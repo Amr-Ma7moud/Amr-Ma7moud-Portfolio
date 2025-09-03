@@ -2,7 +2,7 @@ import SplitText from "./SplitText/splittext";
 
 export default function SplitName() {
     const handleAnimationComplete = () => {
-        console.log('All letters have animated!');
+        console.log('Shouldnt See This');
     };
 
     return (
@@ -21,7 +21,7 @@ export default function SplitName() {
             onLetterAnimationComplete={handleAnimationComplete}
             gradient={true}
             gradientColors={["#673AB7", "#2196F3"]}
-            replayOnEnter={true} // Add this to enable re-animation
+            replayOnEnter={true} // this aims to re-trigger the animation when the element enters the view again
         />
     );
 }

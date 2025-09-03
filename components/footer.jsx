@@ -34,7 +34,9 @@ export default function Footer() {
                 Dev<span className="text-white">Portfolio</span>
               </span>
             </Link>
-            <p className="text-gray-400 mb-6 max-w-md">
+            <p className="text-gray-400 mb-6 max-w-md"
+              data-aos={"zoom-out"} data-aos-duration={1200}
+            >
                 Computer Science student with experience in full-stack web development and competitive programming.
                 Skilled in developing cross-platform applications using Python, JavaScript, and modern frameworks
                 including Flask and Laravel. Fast learner, adaptable, detail-oriented, and able to work well in team
@@ -42,7 +44,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div>
+          <div   data-aos={"zoom-out"} data-aos-duration={800}  >
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
@@ -94,8 +96,10 @@ export default function Footer() {
               {contactLinks
               .filter((link) =>
                   [FaGithub, FaLinkedin, FaWhatsapp, MdEmail, MdLocationOn].includes(link.name))
-              .map((link) => 
-                <li className="flex items-center gap-2" key={link.name}>
+              .map((link, index) => 
+                <li className="flex items-center gap-2" key={link.name}
+                  data-aos={"zoom-out"} data-aos-duration={800 + index * 300} 
+                >
                   <span className="text-purple-500">
                     {React.createElement(link.name, { size: 24 })}
                   </span>

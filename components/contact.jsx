@@ -103,12 +103,12 @@ export default function Contact() {
             </div>
 
             <div className="container mx-auto px-4 md:px-6">
-                <div className="text-center mb-16">
+                <div className="text-center mb-16" data-aos={"zoom-in"} data-aos-duration={1000 } >
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">
                         Get In{" "}
                         <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
-              Touch
-            </span>
+                        Touch
+                    </span>
                     </h2>
                     <p className="text-gray-400 max-w-2xl mx-auto">
                         Have a project in mind or want to collaborate? Feel free to reach
@@ -123,8 +123,10 @@ export default function Contact() {
                             {contactLinks
                             .filter((link) =>
                                 [ FaWhatsapp, MdEmail ,FaClock ,MapPin].includes(link.name))
-                            .map((link) => 
-                            <div className="flex items-start gap-4 p-4 bg-gray-900 rounded-lg hover:bg-gray-800 transition-all">
+                            .map((link, index) => 
+                            <div className="flex items-start gap-4 p-4 bg-gray-900 rounded-lg hover:bg-gray-800 transition-all"
+                            data-aos={"zoom-in-right"} data-aos-duration={1000 + index * 300} 
+                            >
                                 <div className="p-3 bg-gray-800 rounded-lg text-purple-500">
                                     {React.createElement(link.name, { size: 20 })}
                                 </div>
@@ -145,7 +147,9 @@ export default function Contact() {
 
                     {/* Contact Form */}
                     <div className="lg:col-span-2">
-                        <div className="bg-gray-900 p-8 rounded-xl border border-gray-800 shadow-xl">
+                        <div className="bg-gray-900 p-8 rounded-xl border border-gray-800 shadow-xl"
+                            data-aos={"zoom-in-left"} data-aos-duration={1500} 
+                        >
                             <div className="flex items-center gap-2 mb-6">
                                 <MessageCircle className="text-purple-500" size={24} />
                                 <h3 className="text-2xl font-semibold">Send me a message</h3>
