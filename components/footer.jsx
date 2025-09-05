@@ -103,12 +103,15 @@ export default function Footer() {
                   <span className="text-purple-500">
                     {React.createElement(link.name, { size: 24 })}
                   </span>
-                  <a
+                  <div className="text-white">
+                    { link.href ?
+                    <a
                     href={link.href}
                     className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {link.innerText}
-                  </a>
+                    >
+                        {link.innerText}
+                    </a> : link.innerText}
+                      </div>
                 </li>
               )}
             </ul>
