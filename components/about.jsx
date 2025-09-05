@@ -131,9 +131,10 @@ export default function About() {
                             </h4>
 
                             <p className="text-gray-300 mb-8 text-lg leading-relaxed">
-                                I'm a passionate Full Stack Developer specializing in building responsive, accessible,
-                                and performant web applications using modern technologies. With a keen eye for design
-                                and a commitment to code quality, I create solutions that are both beautiful and functional.
+                            Computer Science student with experience in full-stack web development, Android development and competitive programming.
+                Skilled in developing cross-platform applications using Python, JavaScript, and modern frameworks
+                including Flask and Laravel. Fast learner, adaptable, detail-oriented, and able to work well in team
+                environments, with a focus on delivering high-quality solutions efficiently.
                             </p>
 
                             <div className="flex flex-col gap-6 mb-10">
