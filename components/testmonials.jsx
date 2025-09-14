@@ -105,11 +105,11 @@ export function Testimonials() {
               ? '0 25px 50px -12px rgba(139, 92, 246, 0.25), 0 0 15px rgba(139, 92, 246, 0.1)' 
               : '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
           }}
-					
+          
         >
-					<div className="flex flex-col md:flex-row justify-center items-center mb-6 md:mb-8"
-					                     data-aos="zoom-in"
-															 data-aos-duration="1600">
+          <div className="flex flex-col md:flex-row justify-center items-center mb-6 md:mb-8"
+                               data-aos="zoom-in"
+                               data-aos-duration="1600">
             <button
               className="hidden md:flex group inline-flex size-10 md:size-12 items-center justify-center rounded-full bg-gray-700 p-2 mr-4 hover:bg-purple-600 transition-all duration-300 mb-4 md:mb-0 transform hover:scale-110 hover:-translate-x-1"
                           onClick={handlePreviousSlide}
@@ -127,7 +127,7 @@ export function Testimonials() {
 
               >
                 <div className="mb-4 text-purple-500">
-                  <Quote size={32} className="opacity-70" />
+                  <Quote size={32} className="opacity-70" style={{ transform: 'rotate(180deg)' }} />
                 </div>
                 <p className="font-medium text-lg md:text-xl text-white leading-relaxed mb-4 md:mb-6">
                   {testimonials[currentSlide].content}
@@ -195,6 +195,21 @@ export function Testimonials() {
             ))}
           </div>
         </div>
+
+                <div className="text-center pt-20" data-aos={"zoom-in"} data-aos-duration={1000 } >
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                        <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
+                            Hello World
+                        </span>
+                    </h2>
+                    <p className="text-gray-400 justify-center flex max-w-2xl mx-auto">
+                        i belive in
+                      <Quote className="mr-2 ml-2  rotate-180 text-purple-600 -translate-y-1/4 hover:rotate-0 transition-all duration-300" size={16}  />
+            < span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">what i cant make i dont understand
+            </span>
+                      <Quote className="ml-2 mr-2 text-purple-600  translate-y-2/4 hover:rotate-180 transition-all duration-300" size={16} />
+                  </p>
+                </div>
       </div>
     </section>
   );

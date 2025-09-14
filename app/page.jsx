@@ -20,27 +20,27 @@ function Home() {
   useEffect(() => {
     setIsLoaded(true)
   }, [])
-    const LoadingSpinner = () => (
-        <div className="spinner" aria-label="Loading">
-            <div className="spinner-circle"></div>
-        </div>
-    );
+  const LoadingSpinner = () => (
+    <div className="spinner" aria-label="Loading">
+      <div className="spinner-circle"></div>
+    </div>
+  );
 
   useEffect(() => {
     AOS.init({
       duration: 800,
       easing: 'ease-out-quad',
-      offset:100,
-      once: false, 
-      mirror: true, 
+      offset: 100,
+      once: false,
+      mirror: true,
       anchorPlacement: 'top-bottom'
     });
-    
+
     // Refresh AOS when window is resized or orientation changes
     const refreshAOS = () => AOS.refresh();
     window.addEventListener('resize', refreshAOS);
     window.addEventListener('orientationchange', refreshAOS);
-    
+
     return () => {
       window.removeEventListener('resize', refreshAOS);
       window.removeEventListener('orientationchange', refreshAOS);
@@ -49,8 +49,8 @@ function Home() {
 
   return (
     <main className="min-h-screen">
-        <Background className={"absolute  inset-0 -z-10 pointer-events-none"} />
-        <Navbar />
+      <Background />
+      <Navbar />
       <div className={`transition-opacity duration-500 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
         <Hero />
         <About />

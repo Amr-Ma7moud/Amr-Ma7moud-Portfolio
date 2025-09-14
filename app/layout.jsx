@@ -1,5 +1,6 @@
 import { Inter, Fira_Code } from "next/font/google"
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css"
 
 // Optimize font loading with subsets and display swap
@@ -93,6 +94,7 @@ export default function RootLayout({ children }) {
         {/* Main content */}
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )

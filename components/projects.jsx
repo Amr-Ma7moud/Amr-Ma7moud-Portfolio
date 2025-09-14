@@ -11,7 +11,8 @@ export default function Projects() {
     {
       title: "Cross Platform Task Manager ",
       description:
-        "A responsive admin dashboard for an e-commerce platform with analytics, inventory management, and order processing.",
+        `A responsive cross-platform task manager desktop application that allows users to 
+        manage and track their system efficiently.`,
       image: "/task-manager.jpg",
       tags: ["Python", "Psutil", "Electron", "Operating System"],
       liveUrl: "",
@@ -20,7 +21,7 @@ export default function Projects() {
     {
       title: "Project U",
       description:
-        "A modern travel booking application with destination search, booking management, and user authentication.",
+        "A Website that help students to find university and college that match their preferences and grades.",
       image: "/project-U.png",
       tags: ["Python", "Flask", "JS", "SWE"],
       liveUrl: "",
@@ -29,9 +30,9 @@ export default function Projects() {
     {
       title: "Course Catalog",
       description:
-        "A web application that allows users to search for recipes based on ingredients, dietary restrictions, and meal types.",
+        "A website that help student search for university courses based on normal queries or advanced filters so they can find the best match.",
       image: "",
-      tags: ["PHP" ,"Laravel", "API Integration", "Vanilla Responsive Design"],
+      tags: ["PHP" ,"Laravel", "Vanilla Responsive Design"],
       liveUrl: "",
       githubUrl: "https://github.com/Amr-Ma7moud/CourseCatalogue",
     },
@@ -41,7 +42,7 @@ export default function Projects() {
         "A personal portfolio website showcasing projects, skills, and contact information with a modern design.",
       image: "portfolio.png",
       tags: ["React", "JS", "Tailwind CSS"],
-      liveUrl: "#",
+      liveUrl: "",
       githubUrl: "https://github.com/Amr-Ma7moud/My_Portfolio",
     },
   ]

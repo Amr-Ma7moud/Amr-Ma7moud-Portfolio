@@ -72,31 +72,31 @@ export default function Hero() {
         </div> */}
         {/* this is cool but noone liked it so i think it will not see production */}
 
-        <p className={`max-w-2xl ${TEXT_TERTIARY} mb-10 mx-auto`}>
+        <p className={`max-w-2xl ${TEXT_TERTIARY} mb-10 mx-auto hover:text-white cursor-default `}>
           I create engaging, responsive, and user-friendly web experiences and android apps
           with modern technologies and clean code.
         </p>
 
         <div  className="flex justify-center items-center flex-col sm:flex-row gap-4">
-          <Link data-aos={"fade-up"} data-aos-duration={1500}
+          <Link className={`px-6 py-3 rounded-lg ${PRIMARY_GRADIENT} ${TEXT_PRIMARY} font-medium shadow-lg hover:scale-105 shadow-purple-500/20 hover:shadow-purple-500/30 transition-all `}
             href="#projects"
-            className={`px-6 py-3 rounded-lg ${PRIMARY_GRADIENT} ${TEXT_PRIMARY} font-medium shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 transition-all hover:scale-105`}
           >
             View My Work
           </Link>
-          <Link data-aos={"fade-up"} data-aos-duration={1800}
-            href="#contact"
-            className={`px-6 py-3 rounded-lg ${SECONDARY_BG} ${TEXT_PRIMARY} font-medium transition-all hover:scale-105`}
+          <Link href="#contact"
+            className={`px-6 py-3 rounded-lg ${SECONDARY_BG} ${TEXT_PRIMARY} font-medium hover:scale-105 hover:bg-opacity-20 transition-all`}
           >
             Contact Me
           </Link>
         </div>
       </div>
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a href="#about" className={`${TEXT_TERTIARY} hover:${TEXT_PRIMARY} transition-colors`}>
-          <ArrowDown size={24} />
-        </a>
-      </div> 
+        <div className="absolute bottom-1 left-1/2 -translate-x-1/2 flex flex-col items-center z-20">
+            <a href="#about" className={`${TEXT_TERTIARY} hover:${TEXT_PRIMARY} transition-colors`}>
+                    <div className="w-6 h-10 border-2 border-primary/40 rounded-full flex items-center justify-center mb-2 bg-background/80 shadow-md hover:shadow-lg hover:shadow-primary/30 hover:animate-bounce">
+                        <div className="w-1 h-4 bg-primary/70 rounded-full mt-1 animate-bounce"></div>
+                    </div>
+            </a>
+      </div>
     </section>
   );
 }

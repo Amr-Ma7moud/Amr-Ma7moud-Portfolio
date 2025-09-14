@@ -28,12 +28,12 @@ export default function Navbar() {
     { name: "Contact", href: "#contact" },
   ]
 
-    const contactLinks = [
-      { name: FaGithub, href: "https://github.com/Amr-Ma7moud" },
-      { name: FaLinkedin, href: "https://www.linkedin.com/in/amr-mahmoud-/" },
-      { name: FaWhatsapp, href: "https://wa.me/+201033050549" },
-      { name: MdEmail, href: "mailto:amrma7mouddev05@gmail.com" },
-    ]
+  const contactLinks = [
+    { name: FaGithub, href: "https://github.com/Amr-Ma7moud" },
+    { name: FaLinkedin, href: "https://www.linkedin.com/in/amr-mahmoud-/" },
+    { name: FaWhatsapp, href: "https://wa.me/+201033050549" },
+    { name: MdEmail, href: "mailto:amrma7mouddev05@gmail.com" },
+  ]
 
   return (
     <header
@@ -43,7 +43,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <Link href="/" className="text-xl font-bold">
             <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
-              Amr's <span className="text-white">Portfolio</span>
+              {"<Amr Mahmoud />"}
             </span>
           </Link>
 
@@ -61,16 +61,11 @@ export default function Navbar() {
 
           {/* Social Icons */}
           <div className="hidden md:flex items-center space-x-4">
-            {contactLinks.map((link,index) => (
-            <a
-              href={link.href}
-              key={index}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-all hover:-translate-y-1 duration-200"
-            >
-              {React.createElement(link.name, { size: 20 })}
-            </a>))}
+            {contactLinks.map((link, index) => (
+              <a href={link.href} key={index} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all hover:-translate-y-1 duration-200"
+              >
+                {React.createElement(link.name, { size: 20 })}
+              </a>))}
           </div>
 
           {/* Mobile Menu Button */}
@@ -82,9 +77,8 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       <div
-        className={`md:hidden bg-gray-900 shadow-lg transition-all duration-300 ${
-          isOpen ? "opacity-100 max-h-96" : "opacity-0 max-h-0 overflow-hidden"
-        }`}
+        className={`md:hidden bg-gray-900 shadow-lg transition-all duration-300 ${isOpen ? "opacity-100 max-h-96" : "opacity-0 max-h-0 overflow-hidden"
+          }`}
       >
         <div className="container mx-auto px-4 py-4">
           <nav className="flex flex-col space-y-4">
@@ -99,15 +93,15 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="flex space-x-4 pt-4 border-t border-gray-800">
-            {contactLinks.map((link) => (
-            <a
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 mb-5 hover:text-white"
-            >
-              {React.createElement(link.name, { size: 20 })}
-            </a>))}
+              {contactLinks.map((link) => (
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 mb-5 hover:text-white"
+                >
+                  {React.createElement(link.name, { size: 20 })}
+                </a>))}
             </div>
           </nav>
         </div>
