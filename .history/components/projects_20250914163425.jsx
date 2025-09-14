@@ -60,8 +60,8 @@ export default function Projects() {
   }
 
   return (
-    <section id="projects" className="py-20 bg-gray-900 w-full max-w-full overflow-hidden">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+    <section id="projects" className="py-20 bg-gray-900">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12 sm:mb-16 px-4">
           <h2
             data-aos="fade-down"

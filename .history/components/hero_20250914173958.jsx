@@ -58,7 +58,7 @@ export default function Hero() {
       id=""
       className="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden w-full max-w-full"
     >
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 z-10">
+      <div className="container px-4 md:px-6 z-10">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6">
           <NameSplit/>
         </h1>

@@ -25,8 +25,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900 py-8 sm:py-12 border-t border-gray-800 w-full max-w-full overflow-hidden">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+    <footer className="bg-gray-900 py-8 sm:py-12 border-t border-gray-800">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           <div className="sm:col-span-2 lg:col-span-2">
             <Link href="/" className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 inline-block">

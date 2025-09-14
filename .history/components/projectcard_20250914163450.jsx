@@ -182,16 +182,16 @@ function ProjectCard({ project, isOpen, onClose }) {
             </div>
 
             {/* Action buttons - Fixed at bottom */}
-            <div className="p-4 sm:p-6 lg:p-8 border-t border-gray-700 bg-gray-900">
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <div className="p-8 border-t border-gray-700 bg-gray-900">
+              <div className="flex flex-wrap gap-4">
                 {project.githubUrl && (
                   <a
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 py-2.5 sm:py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium text-sm sm:text-base"
+                    className="flex items-center gap-3 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium"
                   >
-                    <Github size={16} className="sm:w-5 sm:h-5" />
+                    <Github size={20} />
                     View Source Code
                   </a>
                 )}
@@ -200,9 +200,9 @@ function ProjectCard({ project, isOpen, onClose }) {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 py-2.5 sm:py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm sm:text-base"
+                    className="flex items-center gap-3 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
                   >
-                    <ExternalLink size={16} className="sm:w-5 sm:h-5" />
+                    <ExternalLink size={20} />
                     Live Demo
                   </a>
                 )}

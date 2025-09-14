@@ -137,7 +137,7 @@ export default function About() {
                             <div className="flex flex-col gap-6 mb-10">
                                 {contactLinks
                                     .filter((link) => [MdEmail, MapPin].includes(link.name))
-                                    .map((link, index) => (<div key={`about-contact-${index}`} className="flex items-center gap-3 bg-gray-600 bg-opacity-50 p-4 rounded-lg border border-gray-700 transition-all hover:bg-purple-600 hover:text-white">
+                                    .map((link) => (<div className="flex items-center gap-3 bg-gray-600 bg-opacity-50 p-4 rounded-lg border border-gray-700 transition-all hover:bg-purple-600 hover:text-white">
                                         {React.createElement(link.name, { className: "text-white", size: 24 })}
                                         {link.href ? <a href={link.href} className="text-gray-300 hover:text-white">{link.innerText}</a>
                                             : <span className="text-gray-300">{link.innerText}</span>}
@@ -168,7 +168,7 @@ export default function About() {
                                     .filter((link) =>
                                         [FaGithub, FaLinkedin, FaWhatsapp, MdEmail].includes(link.name))
                                     .map((link, index) => (
-                                        <a key={`about-social-${index}`} data-aos={"fade-up"} data-aos-duration={200 + index * 200}
+                                        <a data-aos={"fade-up"} data-aos-duration={200 + index * 200}
                                             href={link.href}
                                             target="_blank"
                                             rel="noopener noreferrer"

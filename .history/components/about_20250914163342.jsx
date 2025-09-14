@@ -58,7 +58,7 @@ export default function About() {
     }, [])
 
     return (
-        <section id="about" className="py-20 min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 relative overflow-hidden w-full max-w-full">
+        <section id="about" className="py-20 min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 relative overflow-hidden">
             {/* Animated background elements */}
             <div className="absolute inset-0 -z-10 overflow-hidden">
                 <div className="absolute top-20 left-40 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-10 animate-pulse"></div>
@@ -80,7 +80,7 @@ export default function About() {
         }
       `}</style>
 
-            <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div className="container mx-auto px-4 md:px-6">
                 <div
                     ref={ref}
                     className={`max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -122,12 +122,12 @@ export default function About() {
                         </div>
 
                         {/* Content */}
-                        <div className="order-1 lg:order-2 px-4 lg:px-0" data-aos="fade-left">
-                            <h4 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6">
+                        <div className="order-1 lg:order-2" data-aos="fade-left">
+                            <h4 className="text-2xl md:text-3xl font-bold mb-6">
                                 Computer Science student at E-JUST
                             </h4>
 
-                            <p className="text-gray-300 mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed">
+                            <p className="text-gray-300 mb-8 text-lg leading-relaxed">
                                 Computer Science student with experience in full-stack web development, Android development and competitive programming.
                                 Skilled in developing cross-platform applications using Python, JavaScript, and modern frameworks
                                 including Flask and Laravel. Fast learner, adaptable, detail-oriented, and able to work well in team
@@ -137,7 +137,7 @@ export default function About() {
                             <div className="flex flex-col gap-6 mb-10">
                                 {contactLinks
                                     .filter((link) => [MdEmail, MapPin].includes(link.name))
-                                    .map((link, index) => (<div key={`about-contact-${index}`} className="flex items-center gap-3 bg-gray-600 bg-opacity-50 p-4 rounded-lg border border-gray-700 transition-all hover:bg-purple-600 hover:text-white">
+                                    .map((link) => (<div className="flex items-center gap-3 bg-gray-600 bg-opacity-50 p-4 rounded-lg border border-gray-700 transition-all hover:bg-purple-600 hover:text-white">
                                         {React.createElement(link.name, { className: "text-white", size: 24 })}
                                         {link.href ? <a href={link.href} className="text-gray-300 hover:text-white">{link.innerText}</a>
                                             : <span className="text-gray-300">{link.innerText}</span>}
@@ -146,17 +146,18 @@ export default function About() {
                             </div>
 
                             {/* Stats */}
-                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 sm:mb-10"  >
+                            <div className="grid grid-cols-3 gap-4 mb-10"  >
                                 {stats.map((stat, index) => (
-                                    <div key={index} className="hover:scale-110 transition-transform">
+                                    <div className={"hover:scale-110"}>
                                         <div
+                                            key={index}
                                             data-aos={"fade-up"}
                                             data-aos-duration={700 + index * 200}
-                                            className="bg-gray-800 bg-opacity-50 p-3 sm:p-4 rounded-lg hover:bg-purple-800 transition-all text-center border border-gray-700"
+                                            className="bg-gray-800 bg-opacity-50 p-4 rounded-lg hover:bg-purple-800 transition-all text-center border border-gray-700  "
                                         >
                                             <div className="text-white flex justify-center mb-2">{stat.icon}</div>
-                                            <div className="text-xl sm:text-2xl font-bold text-white mb-1">{stat.value}</div>
-                                            <div className="text-xs sm:text-sm text-gray-400">{stat.label}</div>
+                                            <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                                            <div className="text-sm text-gray-400 ">{stat.label}</div>
                                         </div>
                                     </div>
                                 ))}
@@ -168,7 +169,7 @@ export default function About() {
                                     .filter((link) =>
                                         [FaGithub, FaLinkedin, FaWhatsapp, MdEmail].includes(link.name))
                                     .map((link, index) => (
-                                        <a key={`about-social-${index}`} data-aos={"fade-up"} data-aos-duration={200 + index * 200}
+                                        <a data-aos={"fade-up"} data-aos-duration={200 + index * 200}
                                             href={link.href}
                                             target="_blank"
                                             rel="noopener noreferrer"

@@ -56,9 +56,9 @@ export default function Hero() {
   return (
     <section
       id=""
-      className="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden w-full max-w-full"
+      className="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden"
     >
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 z-10">
+      <div className="container px-4 md:px-6 z-10">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6">
           <NameSplit/>
         </h1>
@@ -72,19 +72,19 @@ export default function Hero() {
         </div> */}
         {/* this is cool but noone liked it so i think it will not see production */}
 
-        <p className={`max-w-2xl ${TEXT_TERTIARY} mb-8 sm:mb-10 mx-auto hover:text-white cursor-default text-sm sm:text-base md:text-lg leading-relaxed px-4`}>
+        <p className={`max-w-2xl ${TEXT_TERTIARY} mb-10 mx-auto hover:text-white cursor-default `}>
           I create engaging, responsive, and user-friendly web experiences and android apps
           with modern technologies and clean code.
         </p>
 
-        <div className="flex justify-center items-center flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-md sm:max-w-none mx-auto px-4">
-          <Link className={`w-full sm:w-auto px-6 py-3 rounded-lg ${PRIMARY_GRADIENT} ${TEXT_PRIMARY} font-medium shadow-lg hover:scale-105 shadow-purple-500/20 hover:shadow-purple-500/30 transition-all text-center `}
+        <div  className="flex justify-center items-center flex-col sm:flex-row gap-4">
+          <Link className={`px-6 py-3 rounded-lg ${PRIMARY_GRADIENT} ${TEXT_PRIMARY} font-medium shadow-lg hover:scale-105 shadow-purple-500/20 hover:shadow-purple-500/30 transition-all `}
             href="#projects"
           >
             View My Work
           </Link>
           <Link href="#contact"
-            className={`w-full sm:w-auto px-6 py-3 rounded-lg ${SECONDARY_BG} ${TEXT_PRIMARY} font-medium hover:scale-105 hover:bg-opacity-20 transition-all text-center`}
+            className={`px-6 py-3 rounded-lg ${SECONDARY_BG} ${TEXT_PRIMARY} font-medium hover:scale-105 hover:bg-opacity-20 transition-all`}
           >
             Contact Me
           </Link>

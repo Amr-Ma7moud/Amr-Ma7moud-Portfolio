@@ -62,9 +62,9 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 w-full max-w-full z-50 transition-all duration-300 ${scrolled ? "bg-gray-900/90 backdrop-blur-md py-3 shadow-md" : "bg-transparent py-5"} overflow-hidden`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-gray-900/90 backdrop-blur-md py-3 shadow-md" : "bg-transparent py-5"}`}
     >
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Link href="/" className="text-lg sm:text-xl font-bold">
             <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
@@ -110,7 +110,7 @@ export default function Navbar() {
         className={`md:hidden bg-gray-900 shadow-lg transition-all duration-300 ${isOpen ? "opacity-100 max-h-96" : "opacity-0 max-h-0 overflow-hidden"
           }`}
       >
-        <div className="w-full max-w-7xl mx-auto px-4 py-4">
+        <div className="container mx-auto px-4 py-4">
           <nav className="flex flex-col space-y-4">
             {navLinks.map((link) => (
               <Link

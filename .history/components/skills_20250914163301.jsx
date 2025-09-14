@@ -91,8 +91,8 @@ export default function Skills() {
   ]
 
   return (
-    <section id="skills" className="py-20 w-full max-w-full overflow-hidden">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+    <section id="skills" className="py-20">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16" data-aos={"fade-down"} data-aos-duration={1000}>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             My{" "}
@@ -127,17 +127,17 @@ export default function Skills() {
           </div>
 
           {/* Other technologies */}
-          <div className="mt-6 sm:mt-8">
-            <h3 className="text-lg sm:text-xl font-semibold mb-6 sm:mb-8 text-center">Technologies & Tools</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-4 sm:gap-6">
+          <div className="mt-8">
+            <h3 className="text-xl font-semibold mb-8 text-center">Technologies & Tools</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
               {technologies.map((tech, index) => (
                 <div
                 data-aos={"fade-up"} data-aos-duration={800 + index * 300}
                   key={index}
-                  className="flex flex-col items-center p-3 sm:p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-all duration-300 hover:-translate-y-1 min-h-[100px] sm:min-h-[110px]"
+                  className="flex flex-col items-center p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-all duration-300 hover:-translate-y-1"
                 >
-                  <div className="mb-2 flex-shrink-0 flex items-center justify-center h-8 sm:h-10">{tech.icon}</div>
-                  <span className="text-xs sm:text-sm text-center leading-tight">{tech.name}</span>
+                  <div className="mb-2">{tech.icon}</div>
+                  <span className="text-sm text-center">{tech.name}</span>
                 </div>
               ))}
             </div>

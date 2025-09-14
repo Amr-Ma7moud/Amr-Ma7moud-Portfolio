@@ -58,7 +58,7 @@ export default function About() {
     }, [])
 
     return (
-        <section id="about" className="py-20 min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 relative overflow-hidden w-full max-w-full">
+        <section id="about" className="py-20 min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 relative overflow-hidden">
             {/* Animated background elements */}
             <div className="absolute inset-0 -z-10 overflow-hidden">
                 <div className="absolute top-20 left-40 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-10 animate-pulse"></div>
@@ -80,7 +80,7 @@ export default function About() {
         }
       `}</style>
 
-            <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div className="container mx-auto px-4 md:px-6">
                 <div
                     ref={ref}
                     className={`max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -137,7 +137,7 @@ export default function About() {
                             <div className="flex flex-col gap-6 mb-10">
                                 {contactLinks
                                     .filter((link) => [MdEmail, MapPin].includes(link.name))
-                                    .map((link, index) => (<div key={`about-contact-${index}`} className="flex items-center gap-3 bg-gray-600 bg-opacity-50 p-4 rounded-lg border border-gray-700 transition-all hover:bg-purple-600 hover:text-white">
+                                    .map((link) => (<div className="flex items-center gap-3 bg-gray-600 bg-opacity-50 p-4 rounded-lg border border-gray-700 transition-all hover:bg-purple-600 hover:text-white">
                                         {React.createElement(link.name, { className: "text-white", size: 24 })}
                                         {link.href ? <a href={link.href} className="text-gray-300 hover:text-white">{link.innerText}</a>
                                             : <span className="text-gray-300">{link.innerText}</span>}
@@ -168,7 +168,7 @@ export default function About() {
                                     .filter((link) =>
                                         [FaGithub, FaLinkedin, FaWhatsapp, MdEmail].includes(link.name))
                                     .map((link, index) => (
-                                        <a key={`about-social-${index}`} data-aos={"fade-up"} data-aos-duration={200 + index * 200}
+                                        <a data-aos={"fade-up"} data-aos-duration={200 + index * 200}
                                             href={link.href}
                                             target="_blank"
                                             rel="noopener noreferrer"

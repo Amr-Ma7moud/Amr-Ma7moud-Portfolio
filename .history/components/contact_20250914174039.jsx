@@ -124,7 +124,7 @@ export default function Contact() {
                             .filter((link) =>
                                 [ FaWhatsapp, MdEmail ,FaClock ,MapPin].includes(link.name))
                             .map((link, index) => 
-                            <div key={`contact-info-${index}`} className="flex items-start gap-4 p-4 bg-gray-900 rounded-lg hover:bg-gray-800 transition-all"
+                            <div className="flex items-start gap-4 p-4 bg-gray-900 rounded-lg hover:bg-gray-800 transition-all"
                             data-aos={"zoom-in-right"} data-aos-duration={1000 + index * 300} 
                             >
                                 <div className="p-3 bg-gray-800 rounded-lg text-purple-500">

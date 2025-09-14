@@ -94,15 +94,15 @@ export default function Contact() {
     };
 
     return (
-        <section id="contact" className="py-20 bg-gray-950 relative overflow-hidden w-full max-w-full">
+        <section id="contact" className="py-20 bg-gray-950 relative overflow-hidden">
             {/* Animated background elements */}
             <div className="absolute inset-0 -z-10 overflow-hidden">
-                <div className="absolute top-20 left-10 sm:left-40 w-64 sm:w-96 h-64 sm:h-96 bg-purple-500 rounded-full filter blur-3xl opacity-10 animate-pulse"></div>
-                <div className="absolute top-32 right-10 sm:right-32 w-48 sm:w-80 h-48 sm:h-80 bg-indigo-500 rounded-full filter blur-2xl opacity-15" style={{animation: 'pulse 6s ease-in-out infinite 1s'}}></div>
-                <div className="absolute bottom-40 left-10 sm:left-32 w-40 sm:w-64 h-40 sm:h-64 bg-pink-500 rounded-full filter blur-2xl opacity-20" style={{animation: 'pulse 5s ease-in-out infinite 2s'}}></div>
+                <div className="absolute top-20 left-40 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-10 animate-pulse"></div>
+                <div className="absolute top-32 right-32 w-80 h-80 bg-indigo-500 rounded-full filter blur-2xl opacity-15" style={{animation: 'pulse 6s ease-in-out infinite 1s'}}></div>
+                <div className="absolute bottom-40 left-32 w-64 h-64 bg-pink-500 rounded-full filter blur-2xl opacity-20" style={{animation: 'pulse 5s ease-in-out infinite 2s'}}></div>
             </div>
 
-            <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+            <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center mb-12 sm:mb-16 px-4" data-aos={"zoom-in"} data-aos-duration={1000 } >
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
                         Get In{" "}
@@ -124,7 +124,7 @@ export default function Contact() {
                             .filter((link) =>
                                 [ FaWhatsapp, MdEmail ,FaClock ,MapPin].includes(link.name))
                             .map((link, index) => 
-                            <div key={`contact-info-${index}`} className="flex items-start gap-4 p-4 bg-gray-900 rounded-lg hover:bg-gray-800 transition-all"
+                            <div className="flex items-start gap-4 p-4 bg-gray-900 rounded-lg hover:bg-gray-800 transition-all"
                             data-aos={"zoom-in-right"} data-aos-duration={1000 + index * 300} 
                             >
                                 <div className="p-3 bg-gray-800 rounded-lg text-purple-500">
@@ -147,12 +147,12 @@ export default function Contact() {
 
                     {/* Contact Form */}
                     <div className="lg:col-span-2">
-                        <div className="bg-gray-900 p-4 sm:p-6 lg:p-8 rounded-xl border border-gray-800 shadow-xl"
+                        <div className="bg-gray-900 p-8 rounded-xl border border-gray-800 shadow-xl"
                             data-aos={"zoom-in-left"} data-aos-duration={1500} 
                         >
-                            <div className="flex items-center gap-2 mb-4 sm:mb-6">
-                                <MessageCircle className="text-purple-500" size={20} />
-                                <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold">Send me a message</h3>
+                            <div className="flex items-center gap-2 mb-6">
+                                <MessageCircle className="text-purple-500" size={24} />
+                                <h3 className="text-2xl font-semibold">Send me a message</h3>
                             </div>
 
                             {submitStatus === "success" && (

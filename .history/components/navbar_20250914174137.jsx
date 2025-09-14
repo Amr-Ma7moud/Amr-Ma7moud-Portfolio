@@ -110,7 +110,7 @@ export default function Navbar() {
         className={`md:hidden bg-gray-900 shadow-lg transition-all duration-300 ${isOpen ? "opacity-100 max-h-96" : "opacity-0 max-h-0 overflow-hidden"
           }`}
       >
-        <div className="w-full max-w-7xl mx-auto px-4 py-4">
+        <div className="container mx-auto px-4 py-4">
           <nav className="flex flex-col space-y-4">
             {navLinks.map((link) => (
               <Link

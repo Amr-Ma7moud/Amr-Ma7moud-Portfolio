@@ -121,11 +121,11 @@ function ProjectCard({ project, isOpen, onClose }) {
           
           {/* Right side - Content section */}
           <div className="w-full lg:w-1/2 flex flex-col bg-gray-900">
-            <div className="flex-1 p-4 sm:p-6 lg:p-8 overflow-y-auto">
+            <div className="flex-1 p-8 overflow-y-auto">
               {/* Header */}
-              <div className="mb-6 sm:mb-8 mt-8 sm:mt-0">
-                <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-3 sm:mb-4 pr-8 sm:pr-0">{project.title}</h2>
-                <p className="text-gray-300 leading-relaxed text-sm sm:text-base lg:text-lg">{project.description}</p>
+              <div className="mb-8">
+                <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">{project.title}</h2>
+                <p className="text-gray-300 leading-relaxed text-lg">{project.description}</p>
               </div>
 
               {/* Key Features */}
@@ -182,16 +182,16 @@ function ProjectCard({ project, isOpen, onClose }) {
             </div>
 
             {/* Action buttons - Fixed at bottom */}
-            <div className="p-4 sm:p-6 lg:p-8 border-t border-gray-700 bg-gray-900">
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <div className="p-8 border-t border-gray-700 bg-gray-900">
+              <div className="flex flex-wrap gap-4">
                 {project.githubUrl && (
                   <a
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 py-2.5 sm:py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium text-sm sm:text-base"
+                    className="flex items-center gap-3 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium"
                   >
-                    <Github size={16} className="sm:w-5 sm:h-5" />
+                    <Github size={20} />
                     View Source Code
                   </a>
                 )}
@@ -200,9 +200,9 @@ function ProjectCard({ project, isOpen, onClose }) {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 py-2.5 sm:py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm sm:text-base"
+                    className="flex items-center gap-3 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
                   >
-                    <ExternalLink size={16} className="sm:w-5 sm:h-5" />
+                    <ExternalLink size={20} />
                     Live Demo
                   </a>
                 )}

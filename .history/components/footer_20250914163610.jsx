@@ -25,8 +25,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900 py-8 sm:py-12 border-t border-gray-800 w-full max-w-full overflow-hidden">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+    <footer className="bg-gray-900 py-8 sm:py-12 border-t border-gray-800">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           <div className="sm:col-span-2 lg:col-span-2">
             <Link href="/" className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 inline-block">
@@ -91,8 +91,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Contact Info</h3>
-            <ul className="space-y-1 sm:space-y-2">
+            <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
+            <ul className="space-y-2">
               {contactLinks
               .filter((link) =>
                   [FaGithub, FaLinkedin, FaWhatsapp, MdEmail, MdLocationOn].includes(link.name))
@@ -118,17 +118,17 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-gray-400 text-xs sm:text-sm text-center sm:text-left">
+        <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-400 text-sm mb-4 md:mb-0">
             © {new Date().getFullYear()} Amr Mahmoud. All rights reserved.
           </p>
 
           <motion.button
             onClick={scrollToTop}
             whileHover={{ y: -3 }}
-            className="p-2 sm:p-3 bg-gray-800 rounded-full text-gray-400 hover:text-white hover:bg-gray-700 transition-all"
+            className="p-3 bg-gray-800 rounded-full text-gray-400 hover:text-white hover:bg-gray-700 transition-all"
           >
-            <ArrowUp size={16} className="sm:w-5 sm:h-5" />
+            <ArrowUp size={20} />
           </motion.button>
         </div>
       </div>
