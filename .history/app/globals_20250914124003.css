@@ -180,11 +180,3 @@ html::-webkit-scrollbar-thumb {
 .embla__button--next {
   right: 27px;
 }
-
-/* Line clamp utilities for text truncation */
-.line-clamp-3 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-}

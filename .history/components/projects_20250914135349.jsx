@@ -81,7 +81,7 @@ export default function Projects() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => {
             // Determine animation direction based on index
             const animationDirection = index % 2 === 0 ? "fade-right" : "fade-left";

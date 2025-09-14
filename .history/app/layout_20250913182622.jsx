@@ -22,14 +22,14 @@ export const metadata = {
     template: "%s | Amr Mahmoud"
   },
   description: "Digital portfolio showcasing my expertise in modern web development, featuring projects built with React, Next.js, and cutting-edge technologies. Let's build something amazing together.",
-  keywords: "Web & Android Developer, React, Next.js, JavaScript, Laravel, PHP, TypeScript, Web Development, Portfolio, Best, Egypt, E-JUST",
+  keywords: "Web & Android Developer, React, Next.js, JavaScript, TypeScript, Web Development, Portfolio, Egypt, E-JUST",
   authors: [{ name: "Amr Mahmoud" }],
   creator: "Amr Mahmoud",
   
   // Open Graph metadata for social sharing
   openGraph: {
     title: "Amr Mahmoud | Web & Android Developer",
-    description: "Portfolio of Amr Mahmoud, a passionate Full-Stack & Android Developer.",
+    description: "Digital portfolio showcasing my expertise in modern web development",
     url: "https://amr-mahmoud.dev",
     siteName: "Amr Mahmoud Portfolio",
     images: [
@@ -48,7 +48,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Amr Mahmoud | Web & Android Developer",
-    description: "Portfolio of Amr Mahmoud, a passionate Full-Stack & Android Developer.",
+    description: "Digital portfolio showcasing my expertise in modern web development",
     creator: "@amr_mahmoud",
     images: ["/og-image.png"],
   },

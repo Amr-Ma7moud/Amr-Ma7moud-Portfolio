@@ -55,7 +55,7 @@ export default function Hero() {
 
   return (
     <section
-      id=""
+      id="home"
       className="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden"
     >
       <div className="container px-4 md:px-6 z-10">

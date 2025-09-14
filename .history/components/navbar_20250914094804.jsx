@@ -7,22 +7,6 @@ import { MdEmail } from "react-icons/md"
 import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa"
 import { Menu, X } from "lucide-react"
 
-const navLinks = [
-  { name: "Home", href: "#", id: '' },
-  { name: "About", href: "#about", id: 'about' },
-  { name: "Skills", href: "#skills", id: 'skills'},
-  { name: "Projects", href: "#projects", id: 'projects' },
-  { name: "Contact", href: "#contact", id: 'contact' },
-]
-
-const contactLinks = [
-  { name: FaGithub, href: "https://github.com/Amr-Ma7moud" },
-  { name: FaLinkedin, href: "https://www.linkedin.com/in/amr-mahmoud-/" },
-  { name: FaWhatsapp, href: "https://wa.me/+201033050549" },
-  { name: MdEmail, href: "mailto:amrma7mouddev05@gmail.com" },
-]
-
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -38,19 +22,19 @@ export default function Navbar() {
   }, [])
   
   useEffect(() => {
-    const sections = document.querySelectorAll('section[id]');
+    const sections = document.querySelector('section[id');
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) { setActiveSection(entry.target.id)}
         });  
     },{
-      rootMargin: '-40% 0px -60% 0px',
+      rootMargin: '-50% 0px -50% 0px',
       threshold: 0,
     }
     );
 
-  sections.forEach((section) => {
+  sections.forEach( (section) => {
     observer.observe(section);
   });
 
@@ -59,6 +43,20 @@ export default function Navbar() {
   };
 },[]);
 
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
+  ]
+
+  const contactLinks = [
+    { name: FaGithub, href: "https://github.com/Amr-Ma7moud" },
+    { name: FaLinkedin, href: "https://www.linkedin.com/in/amr-mahmoud-/" },
+    { name: FaWhatsapp, href: "https://wa.me/+201033050549" },
+    { name: MdEmail, href: "mailto:amrma7mouddev05@gmail.com" },
+  ]
 
   return (
     <header
@@ -77,22 +75,22 @@ export default function Navbar() {
             {navLinks.map((link) => {
               const sectionID = link.href.substring(1);
               const isActive  = activeSection === sectionID;
-              return(<div key={link.id}>
+              <div key={link.name}>
                 <Link href={link.href} className={`text-gray-300 hover:text-white transition-colors relative group ${
-                  isActive ? "bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent":""
+                  isActive ? "bg-purple-600":""
                 }
                   `}>
                   {link.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
                 </Link>
-              </div>)
+              </div>
               })}
           </nav>
 
           {/* Social Icons */}
           <div className="hidden md:flex items-center space-x-4">
             {contactLinks.map((link, index) => (
-              <a href={link.href} key={index} target="_blank" rel="noopener noreferrer" className="text-gray-400 transition-all hover:-translate-y-1 hover:text-purple-800 duration-200"
+              <a href={link.href} key={index} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all hover:-translate-y-1 duration-200"
               >
                 {React.createElement(link.name, { size: 20 })}
               </a>))}

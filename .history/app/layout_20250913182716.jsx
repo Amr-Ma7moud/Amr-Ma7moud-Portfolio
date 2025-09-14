@@ -29,7 +29,7 @@ export const metadata = {
   // Open Graph metadata for social sharing
   openGraph: {
     title: "Amr Mahmoud | Web & Android Developer",
-    description: "Portfolio of Amr Mahmoud, a passionate Full-Stack & Android Developer.",
+    description: "Digital portfolio showcasing my expertise in modern web development",
     url: "https://amr-mahmoud.dev",
     siteName: "Amr Mahmoud Portfolio",
     images: [
@@ -48,7 +48,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Amr Mahmoud | Web & Android Developer",
-    description: "Portfolio of Amr Mahmoud, a passionate Full-Stack & Android Developer.",
+    description: "Digital portfolio showcasing my expertise in modern web development",
     creator: "@amr_mahmoud",
     images: ["/og-image.png"],
   },

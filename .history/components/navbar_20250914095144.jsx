@@ -8,11 +8,11 @@ import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa"
 import { Menu, X } from "lucide-react"
 
 const navLinks = [
-  { name: "Home", href: "#", id: '' },
-  { name: "About", href: "#about", id: 'about' },
-  { name: "Skills", href: "#skills", id: 'skills'},
-  { name: "Projects", href: "#projects", id: 'projects' },
-  { name: "Contact", href: "#contact", id: 'contact' },
+  { name: "Home", href: "/" },
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
 ]
 
 const contactLinks = [
@@ -45,7 +45,7 @@ export default function Navbar() {
           if (entry.isIntersecting) { setActiveSection(entry.target.id)}
         });  
     },{
-      rootMargin: '-40% 0px -60% 0px',
+      rootMargin: '-50% 0px -50% 0px',
       threshold: 0,
     }
     );
@@ -77,9 +77,9 @@ export default function Navbar() {
             {navLinks.map((link) => {
               const sectionID = link.href.substring(1);
               const isActive  = activeSection === sectionID;
-              return(<div key={link.id}>
+              return(<div key={link.name}>
                 <Link href={link.href} className={`text-gray-300 hover:text-white transition-colors relative group ${
-                  isActive ? "bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent":""
+                  isActive ? "bg-purple-600":""
                 }
                   `}>
                   {link.name}
@@ -92,7 +92,7 @@ export default function Navbar() {
           {/* Social Icons */}
           <div className="hidden md:flex items-center space-x-4">
             {contactLinks.map((link, index) => (
-              <a href={link.href} key={index} target="_blank" rel="noopener noreferrer" className="text-gray-400 transition-all hover:-translate-y-1 hover:text-purple-800 duration-200"
+              <a href={link.href} key={index} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-all hover:-translate-y-1 duration-200"
               >
                 {React.createElement(link.name, { size: 20 })}
               </a>))}

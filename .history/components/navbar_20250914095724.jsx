@@ -8,7 +8,7 @@ import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa"
 import { Menu, X } from "lucide-react"
 
 const navLinks = [
-  { name: "Home", href: "#", id: '' },
+  { name: "Home", href: "/", id: '' },
   { name: "About", href: "#about", id: 'about' },
   { name: "Skills", href: "#skills", id: 'skills'},
   { name: "Projects", href: "#projects", id: 'projects' },
@@ -45,7 +45,7 @@ export default function Navbar() {
           if (entry.isIntersecting) { setActiveSection(entry.target.id)}
         });  
     },{
-      rootMargin: '-40% 0px -60% 0px',
+      rootMargin: '-50% 0px -50% 0px',
       threshold: 0,
     }
     );

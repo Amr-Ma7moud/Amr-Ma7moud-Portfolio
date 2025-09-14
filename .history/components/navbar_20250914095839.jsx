@@ -45,7 +45,7 @@ export default function Navbar() {
           if (entry.isIntersecting) { setActiveSection(entry.target.id)}
         });  
     },{
-      rootMargin: '-40% 0px -60% 0px',
+      rootMargin: '-50% 0px -50% 0px',
       threshold: 0,
     }
     );

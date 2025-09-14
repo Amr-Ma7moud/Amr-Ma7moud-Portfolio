@@ -9,8 +9,7 @@ import Projects from "@/components/projects"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import Background from "@/components/background"
-import Testimonials from "@/components/testimonials"
-import CallToAction from "@/components/calltoaction"
+import Testimonials from "@/components/testmonials"
 import Hero1 from "../components/hero1.1";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -59,7 +58,7 @@ function Home() {
         <Projects />
         <Contact />
         {/* <Testimonials /> */}
-        <CallToAction />
+        <
         <Footer />
       </div>
     </main>
