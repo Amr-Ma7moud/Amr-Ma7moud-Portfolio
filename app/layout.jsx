@@ -25,7 +25,7 @@ export const metadata = {
   keywords: "Web & Android Developer, React, Next.js, JavaScript, Laravel, PHP, TypeScript, Web Development, Portfolio, Best, Egypt, E-JUST",
   authors: [{ name: "Amr Mahmoud" }],
   creator: "Amr Mahmoud",
-  
+
   // Open Graph metadata for social sharing
   openGraph: {
     title: "Amr Mahmoud | Web & Android Developer",
@@ -43,7 +43,7 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
-  
+
   // Twitter Card metadata
   twitter: {
     card: "summary_large_image",
@@ -52,7 +52,7 @@ export const metadata = {
     creator: "@amr_mahmoud",
     images: ["/og-image.png"],
   },
-  
+
   // Additional metadata
   robots: {
     index: true,
@@ -69,30 +69,33 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html 
-      lang="en" 
+    <html
+      lang="en"
       className="dark scroll-smooth"
       suppressHydrationWarning
     >
       <head>
         {/* Viewport meta tag for proper mobile scaling */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
-        
+
         {/* Favicon */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/p.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/p.png" />
         <link rel="manifest" href="/p.png" />
-        
+
         {/* Preload critical resources */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
+
+        {/* Google Site Verification */}
+        <meta name="google-site-verification" content="thsUt51oMiVubhsUzvqhbOmWPOjG_jjvLlOogaIuGIE" />
+
         {/* Theme color for mobile browsers */}
         <meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)" />
         <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
       </head>
-      
+
       <body className={`${inter.variable} ${firaCode.variable} font-sans bg-gray-950 text-gray-100 antialiased`}>
         {/* Main content */}
         {children}

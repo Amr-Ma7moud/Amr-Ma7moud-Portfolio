@@ -20,6 +20,9 @@ function Home() {
 
   useEffect(() => {
     LoadingSpinner()
+    while(true){
+      //
+    }
     setIsLoaded(true)
   }, [])
   const LoadingSpinner = () => (
