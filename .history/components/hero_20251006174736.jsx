@@ -6,6 +6,7 @@ import Link from "next/link";
 import NameSplit from "./namesplit";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import CoolTextSwitch from "@/components/cooltextswitch"
 
 const PRIMARY_GRADIENT = "bg-gradient-to-r from-purple-600 to-blue-600";
 const SECONDARY_BG = "bg-gray-800 hover:bg-gray-700";
@@ -67,10 +68,9 @@ export default function Hero() {
           I'm <span ref={textRef} className={`${TEXT_PRIMARY} font-medium`}></span>
         </div>
 
-        {/* <div className={`text-2xl md:text-2xl ${TEXT_PRIMARY} </p>font-bold mb-8 ml-3 h-8`}>
-            <CoolTextSwitch className={`${TEXT_PRIMARY} font-medium`} />
-        </div> */}
-        {/* this is cool but no one liked it so i think it will not see production */}
+        <div className={`text-2xl md:text-2xl ${TEXT_PRIMARY} </p>font-bold mb-8 ml-3 h-8`}>
+          <CoolTextSwitch className={`${TEXT_PRIMARY} font-medium`} />
+        </div> {/* this is cool but no one liked it so i think it will not see production */}
 
         <p className={`max-w-2xl ${TEXT_TERTIARY} mb-8 sm:mb-10 mx-auto hover:text-white cursor-default text-sm sm:text-base md:text-lg leading-relaxed px-4`}>
           I create engaging, responsive, and user-friendly web experiences and android apps

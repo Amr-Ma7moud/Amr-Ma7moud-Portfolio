@@ -34,7 +34,7 @@ export const metadata = {
     siteName: "Amr Mahmoud Portfolio",
     images: [
       {
-        url: "portfolio.png",
+        url: "/portfolio.png",
         width: 1200,
         height: 630,
         alt: "Amr Mahmoud - Web & Android Developer",
@@ -50,7 +50,7 @@ export const metadata = {
     title: "Amr Mahmoud | Web & Android Developer",
     description: "Portfolio of Amr Mahmoud, a passionate Full-Stack & Android Developer.",
     creator: "@amr_mahmoud",
-    images: ["/portfolio.png"],
+    images: ["/og-image.png"],
   },
 
   // Additional metadata

@@ -168,9 +168,7 @@ export default function About() {
                                     .filter((link) =>
                                         [FaGithub, FaLinkedin, FaWhatsapp, MdEmail].includes(link.name))
                                     .map((link, index) => (
-                                        <a key={`about-social-${index}`}
-                                            data-aos={"fade-up"}
-                                            data-aos-duration={200 + index * 200}
+                                        <a key={`about-social-${index}`} data-aos={"fade-up"} data-aos-duration={200 + index * 200}
                                             href={link.href}
                                             target="_blank"
                                             rel="noopener noreferrer"

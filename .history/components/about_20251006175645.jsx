@@ -154,8 +154,8 @@ export default function About() {
                                             data-aos-duration={700 + index * 200}
                                             className="bg-gray-800 bg-opacity-50 p-3 sm:p-4 rounded-lg hover:bg-purple-800 transition-all text-center border border-gray-700"
                                         >
-                                            <div className="text-white flex justify-center mb-2">{stat.icon}</div>
-                                            <div className="text-xl sm:text-2xl font-bold text-white mb-1">{stat.value}</div>
+                                            <div className="text-white flex justify-center mb-2">{stat.icon} {stat.value}</div>
+                                            <div className="text-xl sm:text-2xl font-bold text-white mb-1"></div>
                                             <div className="text-xs sm:text-sm text-gray-400">{stat.label}</div>
                                         </div>
                                     </div>
@@ -168,9 +168,7 @@ export default function About() {
                                     .filter((link) =>
                                         [FaGithub, FaLinkedin, FaWhatsapp, MdEmail].includes(link.name))
                                     .map((link, index) => (
-                                        <a key={`about-social-${index}`}
-                                            data-aos={"fade-up"}
-                                            data-aos-duration={200 + index * 200}
+                                        <a key={`about-social-${index}`} data-aos={"fade-up"} data-aos-duration={200 + index * 200}
                                             href={link.href}
                                             target="_blank"
                                             rel="noopener noreferrer"

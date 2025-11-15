@@ -62,7 +62,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 w-full max-w-full z-50 transition-all duration-300 ${scrolled ? "bg-gray-900/90 backdrop-blur-md py-3 shadow-md" : "bg-transparent py-5"} overflow-hidden`}
+      className={`fixed top-0 w-full max-w-full z-50 transition-all duration-300 ${scrolled ? "bg-gray-900/90 backdrop-blur-md py-3 shadow-md opacity-50" : "bg-transparent py-5"} overflow-hidden`}
     >
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         <div className="flex items-center justify-between">

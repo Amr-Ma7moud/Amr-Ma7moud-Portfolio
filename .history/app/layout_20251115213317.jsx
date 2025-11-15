@@ -50,7 +50,7 @@ export const metadata = {
     title: "Amr Mahmoud | Web & Android Developer",
     description: "Portfolio of Amr Mahmoud, a passionate Full-Stack & Android Developer.",
     creator: "@amr_mahmoud",
-    images: ["/portfolio.png"],
+    images: ["/portfolio.png  "],
   },
 
   // Additional metadata

@@ -110,7 +110,20 @@ export default function About() {
                                 </div>
                             </div>
                             <div className=" flex-row gap-4 justify-center">
-                                <Link
+                                {/* Social Links */}
+                                <div className="flex justify-center gap-4 mb-10">
+                                    {contactLinks
+                                        .filter((link) =>
+                                            [FaGithub, FaLinkedin, FaWhatsapp, MdEmail].includes(link.name))
+                                        .map((link, index) => (
+                                            <a key={`about-social-${index}`} data-aos={"fade-up"} data-aos-duration={200 + index * 200}
+                                                href={link.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="p-3 bg-gray-800 bg-opacity-50 rounded-full border border-gray-700 text-gray-300 hover:text-white hover:bg-purple-600 hover:animate-bounce transition-all">
+                                                {React.createElement(link.name, { size: 20 })}
+                                            </a>))}
+                                </div><Link
                                     href="/CV.pdf"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -168,9 +181,7 @@ export default function About() {
                                     .filter((link) =>
                                         [FaGithub, FaLinkedin, FaWhatsapp, MdEmail].includes(link.name))
                                     .map((link, index) => (
-                                        <a key={`about-social-${index}`}
-                                            data-aos={"fade-up"}
-                                            data-aos-duration={200 + index * 200}
+                                        <a key={`about-social-${index}`} data-aos={"fade-up"} data-aos-duration={200 + index * 200}
                                             href={link.href}
                                             target="_blank"
                                             rel="noopener noreferrer"
